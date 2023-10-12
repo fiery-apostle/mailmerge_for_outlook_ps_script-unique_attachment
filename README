@@ -2,7 +2,7 @@
 
 This PowerShell script allows you to send personalized emails to a list of recipients using Microsoft Outlook. You can specify recipient data in an Excel spreadsheet, and the script will send emails with personalized salutations and optional attachments.
 
-The PowerShell script to uses an Excel sheet for the receiving email addresses and add names to the email. To achieve this, you can use the Import-Excel cmdlet from the ImportExcel module if you have it installed. To install run the below script as administrator in PowerShell: Install-Module -Name ImportExcel
+The PowerShell script to uses an Excel sheet for the receiving email addresses and add names to the email. To achieve this, you can use the Import-Excel cmdlet from the ImportExcel module if you have it installed. To install, run the below command as administrator in PowerShell: Install-Module -Name ImportExcel
 
 ## Features
 
