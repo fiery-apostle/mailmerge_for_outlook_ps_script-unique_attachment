@@ -1,0 +1,41 @@
+# Personalized Email Sender Script
+
+This PowerShell script allows you to send personalized emails to a list of recipients using Microsoft Outlook. You can specify recipient data in an Excel spreadsheet, and the script will send emails with personalized salutations and optional attachments.
+
+The PowerShell script to uses an Excel sheet for the receiving email addresses and add names to the email. To achieve this, you can use the Import-Excel cmdlet from the ImportExcel module if you have it installed. To install run the below script as administrator in PowerShell: Install-Module -Name ImportExcel
+
+## Features
+
+- Sends personalized emails to recipients from an Excel spreadsheet.
+- Customizable email subject and body.
+- Option to attach files to emails.
+- Automatic pausing after sending a set number of emails.
+
+## Prerequisites
+
+Before using this script, ensure you have the following prerequisites:
+
+- Microsoft Outlook installed and configured on your computer.
+- An Excel spreadsheet containing recipient information with columns for recipient name, email address, and attachment file paths (if needed).
+
+## Usage
+
+1. Edit the script to specify the path to your Excel file with recipient data (`$excelFilePath`).
+2. Customize the email subject and body to meet your requirements.
+3. If you have attachment files, ensure the file paths are correctly specified in your Excel sheet (use Column C for attachment paths).
+4. Run the script using PowerShell.
+
+## Example Excel Sheet
+
+Here's an example of how your Excel sheet should be structured:
+
+| Name      | Email               | Attachment Path         |
+| --------- | ------------------- | ----------------------- |
+| John Doe  | john@example.com    | C:\Path\To\File1.pdf   |
+| Jane Smith| jane@example.com    | C:\Path\To\File2.docx  |
+
+The script will loop through the rows in your Excel sheet and send personalized emails to each recipient, using their name and email address. Attachments will be included if specified.
+
+## Important Note
+
+- Make sure to review and test the script thoroughly before sending emails to a large list of recipients to avoid any unintended actions.
